@@ -1,0 +1,294 @@
+/* === RESET & BASE STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Star Jedi', sans-serif;
+    color: white;
+    background: black url('images/space-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: cyan;
+  }
+  
+  /* === GLOBAL STYLES === */
+  h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  p {
+    margin: 0 20px;
+    text-align: justify;
+  }
+  
+  section {
+    padding: 60px 20px;
+  }
+  
+  /* === PROGRESS BAR === */
+  #progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+  }
+  
+  #progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, blue, cyan);
+    width: 0;
+    transition: width 0.25s ease-out;
+  }
+  
+  /* === HEADER SECTION === */
+  header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+  }
+  
+  header .scroll-text {
+    animation: scroll 15s linear infinite;
+    font-size: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-200%);
+    }
+  }
+  
+  /* === MAIN CONTENT === */
+  main {
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5);
+    border-top: 2px solid cyan;
+  }
+  
+  /* === SECTIONS === */
+  section {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  #histoire {
+    background: rgba(10, 10, 30, 0.8);
+    color: white;
+  }
+  
+  #armee {
+    background: rgba(30, 10, 10, 0.8);
+    color: cyan;
+  }
+  
+  #alliances {
+    background: rgba(10, 30, 10, 0.8);
+    color: lightgreen;
+  }
+  
+  section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  section p {
+    font-size: 1.2rem;
+  }
+  
+  /* === FOOTER === */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* === RESPONSIVE DESIGN === */
+  @media (max-width: 768px) {
+    header .scroll-text {
+      font-size: 1.5rem;
+    }
+  
+    section p {
+      font-size: 1rem;
+    }
+  
+    h1, h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header .scroll-text {
+      font-size: 1.2rem;
+    }
+  
+    section p {
+      font-size: 0.9rem;
+    }
+  
+    h1, h2 {
+      font-size: 1.5rem;
+    }
+  }
+  /* === BANDEAU DE NAVIGATION === */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid cyan;
+    z-index: 1000;
+  }
+  
+  #navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navbar li {
+    display: inline-block;
+  }
+  
+  #navbar a {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  #navbar a:hover {
+    color: cyan;
+    text-shadow: 0 0 20px white, 0 0 30px cyan;
+  }
+  
+  /* Ajoute un espace pour éviter le chevauchement avec le contenu */
+  body {
+    padding-top: 60px; /* Correspond à la hauteur du bandeau */
+  }
+/* === ACTUALITÉS === */
+#news {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid cyan;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  color: white;
+}
+
+.news-item {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.news-item h2 {
+  font-size: 1.8rem;
+  color: cyan;
+  margin-bottom: 10px;
+}
+
+.news-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.news-item p strong {
+  color: yellow;
+}
+/* === SECTION RECRUTEMENT === */
+#recruitment-info {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid cyan;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  color: white;
+}
+
+#recruitment-info h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+#recruitment-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Modèle de candidature */
+.candidature-model {
+  background: #222;
+  color: cyan;
+  font-family: monospace;
+  font-size: 1.1rem;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid cyan;
+  margin-bottom: 20px;
+}
+
+/* Bouton Discord */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.discord-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: cyan;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.discord-button:hover {
+  background: white;
+}
